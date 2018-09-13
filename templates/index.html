@@ -477,7 +477,7 @@
 	                // AJAX SETUP
 	                $.ajax({
 	                        data:  parametros, //datos que se envian a traves de ajax
-	                        url:   '/send-email', //archivo que recibe la peticion
+	                        url:   '/send-email/', //archivo que recibe la peticion
 	                        type:  'POST', //método de envio
 	                        success: function(data, textStatus, jqXHR){
 	                            var valor = JSON.parse(data);
