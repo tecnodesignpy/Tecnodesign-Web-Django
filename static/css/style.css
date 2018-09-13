@@ -1065,6 +1065,19 @@ header.theme-menu-wrapper.menu-style-three.fixed #mega-menu-wrapper .nav>li>a {p
   margin: 5px 0 40px 0;
 }
 /*------------------------ Our Portfolio ----------------------*/
+@media (max-width: 767px) {
+
+  .our-portfolio .theme-title:before {
+    content: '404';
+    font-size: 150px;
+    color: rgba(9,9,19,0.03);
+    position: absolute;
+    top:0;
+    left:-270px;
+    font-weight: 600;
+    line-height: 175px;
+  }
+}
 .our-portfolio {padding: 180px 0 200px 0;}
 .our-portfolio .theme-title:before {
   content: '404';
