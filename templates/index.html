@@ -481,6 +481,7 @@
 	                        type:  'POST', //método de envio
 	                        success: function(data, textStatus, jqXHR){
 	                            var valor = JSON.parse(data);
+	                            console.log(valor);
 	                            $('#alert-success').fadeIn();
 				                document.getElementById("nombre").value 	= '';
 				                document.getElementById("email").value 		= '';
