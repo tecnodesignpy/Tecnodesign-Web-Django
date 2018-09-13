@@ -1,0 +1,13 @@
+appdirs==1.4.3
+argcomplete==1.9.4
+Django==1.11
+django-multiselectfield==0.1.8
+Pillow==5.2.0
+pyserial==3.4
+python-escpos==2.2.0
+python-printer-escpos==0.0.3
+pytz==2018.5
+pyusb==1.0.2
+PyYAML==3.13
+qrcode==6.0
+six==1.11.0

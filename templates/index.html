@@ -1,0 +1,556 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="description" content="Ideamos soluciones para tu empresa, somos un equipo de gente creativa.">
+		<!-- For IE -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<!-- For Resposive Device -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- For Window Tab Color -->
+		<!-- Chrome, Firefox OS and Opera -->
+		<meta name="theme-color" content="#2c2c2c">
+		<!-- Windows Phone -->
+		<meta name="msapplication-navbutton-color" content="#2c2c2c">
+		<!-- iOS Safari -->
+		<meta name="apple-mobile-web-app-status-bar-style" content="#2c2c2c">
+
+		<title>Productos Digitales | TecnoDesign</title>
+
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" sizes="56x56" href="images/fav-icon/icon.png">
+
+
+		<!-- Main style sheet -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+		<!-- responsive style sheet -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/responsive.css' %}">
+
+
+		<!-- Fix Internet Explorer ______________________________________-->
+
+		<!--[if lt IE 9]>
+			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+			<script src="vendor/html5shiv.js"></script>
+			<script src="vendor/respond.js"></script>
+		<![endif]-->
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=UA-98098912-1"></script>
+			<script>
+			  	window.dataLayer = window.dataLayer || [];
+			  	function gtag(){dataLayer.push(arguments);}
+			  	gtag('js', new Date());
+			  	gtag('config', 'UA-98098912-1');
+			</script>
+		<!-- Facebook Pixel Code -->
+			<script>
+			  !function(f,b,e,v,n,t,s)
+			  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+			  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+			  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+			  n.queue=[];t=b.createElement(e);t.async=!0;
+			  t.src=v;s=b.getElementsByTagName(e)[0];
+			  s.parentNode.insertBefore(t,s)}(window, document,'script',
+			  'https://connect.facebook.net/en_US/fbevents.js');
+			  fbq('init', '476361489367879');
+			  fbq('track', 'PageView');
+			</script>
+			<noscript><img height="1" width="1" style="display:none"
+			  src="https://www.facebook.com/tr?id=476361489367879&ev=PageView&noscript=1"
+			/></noscript>
+		<!-- End Facebook Pixel Code -->
+
+
+
+	    <script type=”text/javascript”>
+	      window.CSRF_TOKEN = “{{ csrf_token }}”;
+	    </script>
+		<style type="text/css">
+			.screen {
+			  display: block;
+			  height: 375px;
+			  overflow: hidden;
+			  position: relative;
+			  margin: 0 auto;
+			}
+
+			.screen img {
+			    max-width: 100%;
+			    height: auto;
+			    position: absolute;
+			    z-index: 0;
+			    margin: auto;
+			    left: 0;
+			    right: 0;
+			    padding: 0;
+			}
+		</style>
+			
+	</head>
+
+	<body>
+		<div class="main-page-wrapper">
+
+			<!-- ===================================================
+				Loading Transition
+			==================================================== -->
+			<div id="loader-wrapper">
+				<div id="loader">
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+
+
+
+			<!-- 
+			=============================================
+				Theme Header
+			============================================== 
+			-->
+			<header class="theme-menu-wrapper menu-style-three">
+				<div class="header-wrapper">
+					<div class="container">
+						<!-- Logo -->
+						<div class="logo float-left tran4s" style="padding-top: 15px;"><a href="index.html"><img src="{% static 'images/logo/logotecno.png' %}" alt="Logo-Tecnodesign" width="150px"></a></div>
+
+						<!-- ============================ Theme Menu ========================= -->
+						<nav class="theme-main-menu float-right navbar" id="mega-menu-wrapper">
+							<!-- Brand and toggle get grouped for better mobile display -->
+						   <div class="navbar-header">
+						     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-1" aria-expanded="false">
+						       <span class="sr-only">Toggle navigation</span>
+						       <span class="icon-bar"></span>
+						       <span class="icon-bar"></span>
+						       <span class="icon-bar"></span>
+						     </button>
+						   </div>
+						   <!-- Collect the nav links, forms, and other content for toggling -->
+						   <div class="collapse navbar-collapse" id="navbar-collapse-1">
+								<ul class="nav">
+									<li class="menu-list"><a href="#theme-main-banner" class="tran3s">Inicio</a></li>
+									<li class="menu-list"><a href="#servicios" class="tran3s">Servicios</a></li>
+									<li class="menu-list"><a href="#portfolio" class="tran3s">Portfolio</a></li>
+									<li class="menu-list"><a href="#clientes" class="tran3s">Clientes</a></li>
+									<li class="menu-list"><a href="#contacto" class="tran3s">Contacto</a></li>
+								</ul>
+						   </div><!-- /.navbar-collapse -->
+						</nav> <!-- /.theme-main-menu -->
+					</div> <!-- /.clearfix -->
+				</div>
+			</header> <!-- /.theme-menu-wrapper -->
+			
+			<!-- 
+			=============================================
+				Theme Main Banner
+			============================================== 
+			-->
+			<div id="theme-main-banner" class="banner-three hidden-xs hidden-sm" style="margin-bottom: 50px;">
+				<div data-src="{% static 'images/home/slider1.jpg'%}">
+					<div class="camera_caption">
+						<div class="container">
+							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">Digital Product<br><span>Studio</span></h1>
+							<h5 class="wow fadeInUp animated">Somos especialistas en Productos Digitales.</h5>
+							<a href="#servicios" class="tran3s wow fadeInUp animated button-two" data-wow-delay="0.3s">Servicios</a>
+						</div> <!-- /.container -->
+					</div> <!-- /.camera_caption -->
+				</div>
+				<div data-src="{% static 'images/home/slider2.jpg'%}">
+					<div class="camera_caption">
+						<div class="container">
+							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">Development <span>& Design</span> </h1>
+							<h5 class="wow fadeInUp animated">Combinamos nuevos conceptos de diseño con las mejores tecnologías.</h5>
+							<a href="#portfolio" class="tran3s wow fadeInUp animated button-two" data-wow-delay="0.3s">Portfolio</a>
+						</div> <!-- /.container -->
+					</div> <!-- /.camera_caption -->
+				</div>
+			</div> <!-- /#theme-main-banner -->
+
+			<div id="theme-reponsive-banner" class="banner-three hidden-md hidden-lg">
+				<div data-src="{% static 'images/home/responsive1.jpg'%}">
+					<div class="camera_caption">
+						<div class="container">
+							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">Digital Product<br><span>Studio</span></h1>
+							<h5 class="wow fadeInUp animated">Somos especialistas en Productos Digitales.</h5>
+							<a href="#servicios" class="tran3s wow fadeInUp animated button-two" data-wow-delay="0.3s">Servicios</a>
+						</div> <!-- /.container -->
+					</div> <!-- /.camera_caption -->
+				</div>
+				<div data-src="{% static 'images/home/responsive2.jpg'%}">
+					<div class="camera_caption">
+						<div class="container">
+							<h1 class="wow fadeInUp animated" data-wow-delay="0.2s">Development <span>& Design</span> </h1>
+							<h5 class="wow fadeInUp animated">Combinamos nuevos conceptos de diseño con las mejores tecnologías.</h5>
+							<a href="#portfolio" class="tran3s wow fadeInUp animated button-two" data-wow-delay="0.3s">Portfolio</a>
+						</div> <!-- /.container -->
+					</div> <!-- /.camera_caption -->
+				</div>
+			</div> <!-- /#theme-main-banner -->
+
+
+			<!-- 
+			=============================================
+				SERVICIOS
+			============================================== 
+			-->
+			<div class="home-service-section" id="servicios">
+				<div class="container">
+					<div class="col-md-9 col-md-offset-3 main-container">
+						<div class="theme-title">
+							<h6>Servicios</h6>
+							<h2>Diseñamos y Desarrollamos Productos Digitales.</h2>
+						</div> <!-- /.theme-title -->
+						<ul class="clearfix row">
+							<li class="col-md-6">
+								<div>
+									<i class="flaticon-drawing"></i>
+									<h5><a href="#servicios" class="tran3s">Digital Branding</a></h5>
+									<p>Creamos Logotipos, Naming, Branding, Merchandising, Manual de Identidad Corporativa.</p>
+								</div>
+							</li>
+							<li class="col-md-6">
+								<div>
+									<i class="flaticon-smartphone"></i>
+									<h5><a href="#servicios" class="tran3s">Web &amp; Mobile Apps</a></h5>
+									<p>Desarrollamos Aplicaciones Móviles para Android y iOS, UX & UI, Product Thinking, React & React Native.</p>
+								</div>
+							</li>
+							<li class="col-md-6">
+								<div>
+									<i class="flaticon-computer"></i>
+									<h5><a href="#servicios" class="tran3s">Websites</a></h5>
+									<p>Diseñamos Páginas Web, Responsive y Autoadministrables, Front-End & Back-End, UX & UI.</p>
+								</div>
+							</li>
+							<li class="col-md-6">
+								<div>
+									<i class="flaticon-square"></i>
+									<h5><a href="#servicios" class="tran3s">Social Media</a></h5>
+									<p>Creamos y administramos contenidos digitales para las Redes Sociales, Estrategias, Campañas.</p>
+								</div>
+							</li>
+						</ul>
+					</div> <!-- /.main-container -->
+					<img src="{% static 'images/home/shape-2.png' %}" alt="Image" class="wow fadeInLeft">
+				</div> <!-- /.container -->
+			</div> 
+
+
+			
+
+			<!-- 
+			=============================================
+				PORTFOLIO
+			============================================== 
+			-->
+			<div class="gullu-portfolio portfolio-grid" id="portfolio">
+				<div class="container">
+					<div class="title text-center" style="margin-bottom: 40px;">
+						<h2>Nuestro Portfolio</h2>
+					</div>
+					<div class="mixitUp-menu">
+						<!--
+	        			<ul>
+	        				<li class="filter active tran3s" data-filter="all">Todos</li>
+							<li class="filter tran3s" data-filter=".Apps">Apps</li>
+							<li class="filter tran3s" data-filter=".Websites">Paginas Web</li>
+							<li class="filter tran3s" data-filter=".Branding">Branding</li>
+							<li class="filter tran3s" data-filter=".SocialMedia">Social Media</li>
+							<li class="filter tran3s" data-filter=".Software">Software</li>
+	        			</ul>
+	        			-->
+	        		</div> 
+
+	        		<div class="row" id="mixitUp-item">
+
+						{% for portfolio in portfolio %}
+							{% if galeria %}
+								{% for galeria in galeria %}
+									{% if galeria.portfolio.pk == portfolio.pk %}
+										<a data-fancybox="{{ portfolio.id }}" href="/media/{{ galeria.imagen }}" style="display: none;" title="{{ portfolio.titulo }}">
+										</a>
+									{% endif %}
+								{% endfor %}
+							{% endif %}
+
+							<div id="{{ forloop.counter }}" style="{% if forloop.counter > 6 %} display: none; {% endif %}">
+								<div style="display:inline-block !important;" class="col-md-3 col-xs-6 mix {{ portfolio.tags|cut:',' }}">
+									<div class="single-item" style="height: 100%">
+										<img src="/media/{{ portfolio.portada }}" alt="{{ portfolio.tags|cut:',' }}">
+										<div class="opacity tran3s">
+											<h5><a href="javascript:void(0);" class="tran3s">{{ portfolio.empresa }}</a></h5>
+											<a data-fancybox="{{ portfolio.id }}" href="/media/{{ portfolio.portada }}" class="view-more tran3s" title="{{ portfolio.titulo }}" style="width: 100%;">
+												<i class="flaticon-plus"></i>
+											</a>
+										</div>
+									</div> <!-- /.single-item -->
+								</div> <!-- /.col-md-6 -->
+							</div>
+						{% endfor %}
+					</div> <!-- /.row -->
+					{% if portfolio.count > 6 %}
+						<div class="our-blog blog-v2">
+							<a id="lazyLoadLink" href="javascript:void(0);" data-page="2" class="load-more tran3s hvr-trim">Ver Más</a>
+						</div>
+					{% endif %}
+				</div> <!-- /.container -->
+			</div> 
+
+
+
+			<!-- 
+			=============================================
+				CLIENTES
+			============================================== 
+			-->
+			<div class="trusted-client" id="clientes">
+				<div class="container">
+					<div class="title">
+						<h2>Marcas que nos respaldan</h2>
+					</div>
+					<div class="row">
+						{% for cliente in clientes %}
+						<div class="col-md-3 col-xs-6">
+							<div class="client-img"><img alt="{{ cliente.nombre }}" style="max-width: 100px !important; width: 100px;" src="{{ MEDIA_URL }}{{ cliente.logo }}"></div>
+						</div>
+						{% endfor %}
+					</div>
+				</div> <!-- /.container -->
+			</div> <!-- /.trusted-client -->
+
+
+			<!-- 
+			=============================================
+				CONTACTO
+			============================================== 
+			-->
+			<div class="contact-us" id="contacto" style="margin-top: 40px;">
+				<div class="container">
+					<div class="row">
+						<div class="col-lg-7 col-md-6 col-xs-12">
+							<div class="contact-us-form">
+									{% csrf_token %}
+									<input required type="text" placeholder="Nombre*" name="name" id="nombre">
+									<input required type="email" placeholder="E-mail*" name="sub" id="email">
+									<textarea  required placeholder="Mensaje*" name="message" id="mensaje"></textarea>
+									<p id="mensaje_error" style="color: red; display: none">Debes completar todos los campos</p>
+									<div class="our-blog blog-v2">
+										<button onclick="send_mail()" class="p-bg-color hvr-trim tran3s" style="border-radius: 28px;">Enviar Mensaje</button>
+									</div>
+									
+							</div> <!-- /.contact-us-form -->
+						</div> <!-- /.col- -->
+						<div class="col-lg-5 col-md-6 col-xs-12">
+							<div class="contact-address">
+								<p>NUESTRA OFICINA</p>
+								<a href="https://goo.gl/maps/TU7gcfkR4rF2" target="_blank" class="tran3s">MOISÉS BERTONI 1180 C/ MALUTIN, VILLA MORRA - ASUNCIÓN.</a>
+								<p>SOLICITA TU PRESUPUESTO</p>
+								<a href="mailto:info@tecnodesign.com.py" target="_blank" class="tran3s">info@tecnodesign.com.py</a>
+								<p>ESCRIBINOS AL WHA!</p>
+								<a href="https://api.whatsapp.com/send?phone=595981371355" target="_blank" class="tran3s">(0981) 371 355</a>
+								<ul>
+									<li><a href="https://facebook.com/tecnodesignpy" target="_blank" class="tran3s"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+									<li><a href="https://instagram.com/tecnodesignpy" target="_blank" class="tran3s"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+								</ul>
+							</div> <!-- /.contact-address -->
+						</div> <!-- /.col- -->
+					</div> <!-- /.row -->
+				</div> <!-- /.conatiner -->
+
+				<!--Contact Form Validation Markup -->
+				<!-- Contact alert -->
+				<div class="alert-wrapper" id="alert-success">
+					<div id="success">
+						<button class="closeAlert"><i class="fa fa-times" aria-hidden="true"></i></button>
+						<div class="wrapper">
+			               	<p>Tu mensaje ha sido enviado exitosamente.</p>
+			             </div>
+			        </div>
+			    </div> <!-- End of .alert_wrapper -->
+			    <div class="alert-wrapper" id="alert-error">
+			        <div id="error">
+			           	<button class="closeAlert"><i class="fa fa-times" aria-hidden="true"></i></button>
+			           	<div class="wrapper">
+			               	<p>No hemos podido enviar tu mensaje.</p>
+			            </div>
+			        </div>
+			    </div> <!-- End of .alert_wrapper -->
+			</div> <!-- /.contact-us -->
+
+
+	        
+
+	        <!-- Scroll Top Button -->
+			<button class="scroll-top tran3s">
+				<i class="fa fa-angle-up" aria-hidden="true"></i>
+			</button>
+
+
+
+		<!-- Js File_________________________________ -->
+
+		<!-- j Query -->
+
+		<script type="text/javascript" src="{% static 'vendor/jquery.2.2.3.min.js' %}"></script>
+
+		<!-- Scroll en la Imagen del portfolio -->
+		<script type="text/javascript" src="{% static 'js/jquery-image-scroll.js' %}"></script>
+
+		<!-- Bootstrap Select JS -->
+		<script type="text/javascript" src="{% static 'vendor/bootstrap-select/dist/js/bootstrap-select.js' %}"></script>
+
+		<!-- Bootstrap JS -->
+		<script type="text/javascript" src="{% static 'vendor/bootstrap/bootstrap.min.js' %}"></script>
+
+		<!-- Vendor js _________ -->
+		<!-- Camera Slider -->
+		<script type='text/javascript' src="{% static 'vendor/Camera-master/scripts/jquery.mobile.customized.min.js' %}"></script>
+	    <script type='text/javascript' src="{% static 'vendor/Camera-master/scripts/jquery.easing.1.3.js' %}"></script> 
+	    <script type='text/javascript' src="{% static 'vendor/Camera-master/scripts/camera.min.js' %}"></script>
+	    <!-- Mega menu  -->
+		<script type="text/javascript" src="{% static 'vendor/bootstrap-mega-menu/js/menu.js' %}"></script>
+		
+		<!-- WOW js -->
+		<script type="text/javascript" src="{% static 'vendor/WOW-master/dist/wow.min.js' %}"></script>
+		<!-- owl.carousel -->
+		<script type="text/javascript" src="{% static 'vendor/owl-carousel/owl.carousel.min.js' %}"></script>
+		<!-- js count to -->
+		<script type="text/javascript" src="{% static 'vendor/jquery.appear.js' %}"></script>
+		<script type="text/javascript" src="{% static 'vendor/jquery.countTo.js' %}"></script>
+		<!-- Fancybox -->
+		<script type="text/javascript" src="{% static 'vendor/fancybox/dist/jquery.fancybox.min.js' %}"></script>
+		<!-- js ui -->
+		<script src="{% static 'vendor/jquery-ui/jquery-ui.min.js' %}"></script>
+		<!-- Ripple js -->
+		<script type="text/javascript" src="{% static 'vendor/jquery.ripples-master/dist/jquery.ripples-min.js' %}"></script>
+		<!-- mixitup -->
+		<script type="text/javascript" src="{% static 'vendor/jquery.mixitup.min.js' %}"></script>
+
+		<!-- Theme js -->
+		<script type="text/javascript" src="{% static 'js/theme.js' %}"></script>
+
+
+		<script type="text/javascript">
+	        $.ajaxSetup({
+	            beforeSend: function(xhr, settings) {
+	                function getCookie(name) {
+	                    var cookieValue = null;
+	                    if (document.cookie && document.cookie != '') {
+	                        var cookies = document.cookie.split(';');
+	                        for (var i = 0; i < cookies.length; i++) {
+	                            var cookie = jQuery.trim(cookies[i]);
+	                            // Does this cookie string begin with the name we want?
+	                            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+	                                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+	                                break;
+	                            }
+	                        }
+	                    }
+	                    return cookieValue;
+	                }
+	                if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+	                    // Only send the token to relative URLs i.e. locally.
+	                    xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+	                }
+	            }
+	        });
+
+			function send_mail() {
+                var nombre    	= document.getElementById("nombre").value
+                var email    	= document.getElementById("email").value
+                var mensaje    	= document.getElementById("mensaje").value
+                if(nombre != '' && email != '' && mensaje != ''){
+					document.getElementById("mensaje_error").style.display = "none";
+                	var parametros = {
+	                    "nombre"           	: nombre,
+	                    "email"  			: email,
+	                    "mensaje"           : mensaje,
+	                };
+	                // AJAX SETUP
+	                $.ajax({
+	                        data:  parametros, //datos que se envian a traves de ajax
+	                        url:   '/send-email', //archivo que recibe la peticion
+	                        type:  'POST', //método de envio
+	                        success: function(data, textStatus, jqXHR){
+	                            var valor = JSON.parse(data);
+	                            $('#alert-success').fadeIn();
+				                document.getElementById("nombre").value 	= '';
+				                document.getElementById("email").value 		= '';
+				                document.getElementById("mensaje").value 	= '';
+	                        },
+	                        error:function(){
+	                        	console.log("ERROR");
+                            	$('#alert-error').fadeIn();
+	                        }
+	                });
+                }else{
+					document.getElementById("mensaje_error").style.display = "block";
+                }
+			}
+
+
+			$(document).on('click', 'a[href^="#"]', function(e) {
+			    // target element id
+			    var id = $(this).attr('href');
+
+			    // target element
+			    var $id = $(id);
+			    if ($id.length === 0) {
+			        return;
+			    }
+
+			    // prevent standard hash navigation (avoid blinking in IE)
+			    e.preventDefault();
+
+			    // top position relative to the document
+			    var pos = $id.offset().top - 80 ;
+
+			    // animated top scrolling
+			    $('body, html').animate({scrollTop: pos},700);
+			});
+
+
+			(function($) {
+				var countClicks = 0;
+				var ya_entro = 0;
+			  $('#lazyLoadLink').on('click', function() {
+			    var portfolio = '{{ portfolio|length }}'
+			    countClicks++;
+			    if(countClicks == 1 && portfolio > 6){
+			    	var veces = parseInt(portfolio - 6)
+			    	if(veces>3){ veces = 3 }
+			    	ya_entro = 6 + parseInt(veces);
+			    }else if(portfolio > 6){
+			    	veces = parseInt(portfolio - ya_entro)
+			    	if(veces>3){ veces = 3 }
+			    	ya_entro = parseInt(parseInt(ya_entro) + parseInt(veces))
+			    }
+			    for (var i = 0; i <= veces-1; i++) {
+			    	var id = parseInt(ya_entro)-parseInt(i);
+			    	document.getElementById(id).style.display = "";
+			    	if(ya_entro == portfolio){
+			    		document.getElementById("lazyLoadLink").style.display = "none";
+			    	}
+			    }
+			  });
+			}(jQuery));
+
+
+		</script>
+		<script type="text/javascript">
+			$( window ).on( 'load', function(){
+				$( '.screen' ).scrollImage();
+			})
+		</script>
+
+		</div> <!-- /.main-page-wrapper -->
+	</body>
+</html>

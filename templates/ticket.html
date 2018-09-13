@@ -1,0 +1,97 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title>Your Website</title>
+</head>
+
+<body>
+<button onclick="sonido()">SONIDO</button>
+
+</body>
+
+<script
+  src="https://code.jquery.com/jquery-2.2.4.js"></script>
+
+<script type="text/javascript">
+	
+	function sonido(){
+		var msg = new SpeechSynthesisUtterance();
+		var voices = window.speechSynthesis.getVoices();
+		//msg.voice = voices[10]; // Note: some voices don't support altering params
+		msg.volume = 1; // 0 to 1
+		msg.rate = 1; // 0.1 to 10
+		msg.pitch = 1; //0 to 2
+		msg.text = 'Ticket';
+		msg.lang = 'es-MX';
+		speechSynthesis.speak(msg);
+
+
+		var letra = new SpeechSynthesisUtterance();
+		var voices = window.speechSynthesis.getVoices();
+		//msg.voice = voices[10]; // Note: some voices don't support altering params
+		letra.volume = 1; // 0 to 1
+		letra.rate = 1; // 0.1 to 10
+		letra.pitch = 1; //0 to 2
+
+		letra.text = 'c';
+		letra.lang = 'es-MX';
+		speechSynthesis.speak(letra);
+
+		msg.text = '1';
+		msg.lang = 'es-MX';
+		speechSynthesis.speak(msg);
+
+		box();
+
+	}
+
+    $.ajaxSetup({
+        beforeSend: function(xhr, settings) {
+            function getCookie(name) {
+                var cookieValue = null;
+                if (document.cookie && document.cookie != '') {
+                    var cookies = document.cookie.split(';');
+                    for (var i = 0; i < cookies.length; i++) {
+                        var cookie = jQuery.trim(cookies[i]);
+                        // Does this cookie string begin with the name we want?
+                        if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                            cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                            break;
+                        }
+                    }
+                }
+                return cookieValue;
+            }
+            if (!(/^http:.*/.test(settings.url) || /^https:.*/.test(settings.url))) {
+                // Only send the token to relative URLs i.e. locally.
+                xhr.setRequestHeader("X-CSRFToken", getCookie('csrftoken'));
+            }
+        }
+    });
+
+	function box(){
+		var msg = new SpeechSynthesisUtterance();
+		var voices = window.speechSynthesis.getVoices();
+		//msg.voice = voices[10]; // Note: some voices don't support altering params
+		msg.volume = 1; // 0 to 1
+		msg.rate = 1; // 0.1 to 10
+		msg.pitch = 1; //0 to 2
+
+		msg.text = 'CAJA 3';
+		msg.lang = 'es-MX';
+		speechSynthesis.speak(msg);
+
+		window.print();
+
+		$.ajax({url:'http://127.0.0.1:9100/htbin/kp.py',
+		success:function(list_printers){
+			console.log(list_printers)
+		}
+	});
+
+	}
+</script>
+</html>

@@ -1,0 +1,9 @@
+env
+*.pyc
+__ pycache __
+apps/clientes/migrations
+apps/contacto/migrations
+apps/portfolio/migrations
+.DS_Store
+media
+db.sqlite3
