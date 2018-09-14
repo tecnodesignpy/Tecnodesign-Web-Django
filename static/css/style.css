@@ -760,6 +760,13 @@ header.theme-menu-wrapper.menu-style-three.fixed #mega-menu-wrapper .nav>li>a {p
   color: #1c1c27;
   line-height: 78px;
 }
+
+@media (max-width: 767px) {
+  .banner-three {
+    margin-bottom: 40px;
+  }
+}
+
 .banner-three .container h1 span,.banner-three .container a.button-two:hover,
 #theme-main-banner.banner-three .camera_prev:before, #theme-main-banner.banner-three .camera_next:before {color: #C70003;}
 .banner-three .container h5 {
@@ -1913,7 +1920,7 @@ footer .bottom-footer {padding: 25px 0 70px 0;}
   padding-bottom: 0;
 }
 /*------------------------ Trusted Client ------------------------*/
-.trusted-client {padding-bottom: 10px;}
+.trusted-client {padding-bottom: 100px; padding-top: 100px;}
 .trusted-client .title {
   text-align: center;
   margin: 40px 0 100px 0;
@@ -2558,6 +2565,13 @@ footer .bottom-footer {padding: 25px 0 70px 0;}
 .blog-sidebar .sidebar-keyword ul li a:hover {color: #fff;}
 /*------------------------ Conatct US -------------------------*/
 .contact-us-form {padding-right: 70px;}
+
+@media (max-width: 767px) {
+  .contact-us{
+    margin-bottom: 40px;
+  }
+}
+
 .contact-us-form input,
 .contact-us-form textarea {
   background: #fff;

@@ -152,6 +152,16 @@
 	position: absolute;
 	width: 100%;
 }
+
+@media (max-width: 767px) {
+	.camera_caption {
+		bottom: 20%;
+		display: block;
+		position: absolute;
+		width: 100%;
+	}
+}
+
 .camera_caption > div {
 	padding: 10px 20px;
 }

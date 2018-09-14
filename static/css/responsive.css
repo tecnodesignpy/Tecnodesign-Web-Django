@@ -25,7 +25,7 @@
   .more-about-us .theme-shape-three,.testimonial-section .theme-shape-four {left:-25%;}
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  .more-about-us .image-box,.home-service-section img,.testimonial-section .image-box {left:-35%;}
+  .more-about-us .image-box,.home-service-section img,.testimonial-section .image-box {left:-230px;}
   .more-about-us .theme-shape-three,.testimonial-section .theme-shape-four {left:-40%;}
   .about-text .about-tab-wrapper {width: 75%;}
 }
