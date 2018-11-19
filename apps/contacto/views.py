@@ -50,6 +50,9 @@ def error404(request):
     clientes        = sorted(Cliente.objects.filter(online=True), key=lambda x: random.random())
     return render(request,'404.html',{'clientes':clientes})
 
+def jobs(request):
+    return render(request,'jobs/typeform.html')
+
 
 
     
